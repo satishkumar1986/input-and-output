@@ -1,0 +1,15 @@
+<h2>parent works!</h2>
+<!-- <p>{{parentStr}}</p> -->
+<!-- <p>{{parentStr?.id}} - {{parentStr?.name}}</p> -->
+<p *ngFor="let data of parentStr">{{data.id}} - {{data.name}}</p>
+
+<!-- <input type="text" #input (keyup)="change(input.value)" > -->
+<!-- <input type="text" #input (keyup)="change($event.target.value)" > -->
+<!-- <app-child [pData]="inputVal"></app-child> -->
+
+<app-child [pDataObj]="childObj" [pDataObjArr]="childObjArr" (childEvent)="parentString($event)"></app-child>
+<!-- <app-child [pDataObjArr]="childObjArr"></app-child> -->
+
+
+<!-- <p>{{parentStr.id}} - {{parentStr.name}}</p> -->
+<!-- <p *ngFor="let data of parentStr">{{data.id}} - {{data.name}}</p> -->
